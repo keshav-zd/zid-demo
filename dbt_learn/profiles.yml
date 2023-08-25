@@ -1,0 +1,19 @@
+name: 'dbt_learn'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'dbt_learn'
+
+# ... other project configuration ...
+dbt_learn:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: postgres
+      pass: Zecdata@1234
+      dbname: dbt
+      schema: public
